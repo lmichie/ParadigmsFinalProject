@@ -52,7 +52,7 @@ hesburghButton.addEventListener('click', function(e) {
 });
 
 const stadiumButton = document.getElementById('stadiumButton');
-cowButton.addEventListener('click', function(e) {
+stadiumButton.addEventListener('click', function(e) {
   console.log('Stadium button was clicked');
   location.href = myURL.concat("/stadium");
   //document.getElementById("AnimalImage").src ="images/stadium.jpg"
