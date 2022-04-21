@@ -13,7 +13,7 @@ exports.zoo = function(req, res, next) {
 
 exports.dome = function(req, res, next) {
    console.log("Clicked on dome button")
-   res.render('dome', { about: 'The statue of Mary atop the Golden Dome weighs 4,400 pounds and stand 18 feet, 7 inches tall.', animal_name:'Dome'});
+   res.render('dome', { about: 'The statue of Mary atop the Golden Dome weighs 4,400 pounds and stand 18 feet, 7 inches tall.', location_name:'Dome'});
 }
 
 exports.croc = function(req, res, next) {
