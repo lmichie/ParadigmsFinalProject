@@ -1,14 +1,14 @@
 exports.index = function(req, res, next) {
-  res.render('index', { about: 'Welcome to our zoo!' , location_name:
- 'Zoo Animals'});
+  res.render('index', { about: 'Welcome to our campus!' , location_name:
+ 'Campus Map'});
 }
 
 exports.zoom = function(req, res, next) {
   res.render('zoom', {about:'Zoom Time'});
 }
 
-exports.zoo = function(req, res, next) {
-   res.render('index', { about: 'Welcome to our zoo.', animal_name:'Zoo Animals'}); 
+exports.campus = function(req, res, next) {
+   res.render('index', { about: 'Welcome to our campus.', location_name:'Campus'}); 
 }
 
 exports.dome = function(req, res, next) {
@@ -16,14 +16,14 @@ exports.dome = function(req, res, next) {
    res.render('dome', { about: 'The statue of Mary atop the Golden Dome weighs 4,400 pounds and stand 18 feet, 7 inches tall.', location_name:'Dome'});
 }
 
-exports.croc = function(req, res, next) {
-   console.log("Clicked on croc button")
-   res.render('crocodile', { about: 'Crocodiles are repitles with sharp teeth.  They can run very fast over short distances.' , animal_name:'Crocodile'}); 
+exports.hes = function(req, res, next) {
+   console.log("Clicked on hes button")
+   res.render('hesburgh', { about: 'Hesburgh Library is home to 14 floors plus one lower level.' , location_name:'Hesburgh'}); 
 }
 
-exports.cow = function(req, res, next) {
-   console.log("Clicked on COW button")
-   res.render('cow', { about: 'Cows are ruminants, which are cud chewing mammals. Sheep and camels also are ruminants. A cow chews her cud (regurgitated, partially digested food) for up to 8 hours each day.' , animal_name:'Cow'}); 
+exports.stadium = function(req, res, next) {
+   console.log("Clicked on Stadium button")
+   res.render('stadium', { about: 'The stadium seat over 80,000 fightin\' Irish Fans!' , location_name:'Stadium'}); 
 }
 
 exports.grotto = function(req, res, next) {
