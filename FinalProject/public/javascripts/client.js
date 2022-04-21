@@ -6,10 +6,10 @@ console.log('Client-side code running');
 // This is Prof. Huang's port.  Use your own please!!
 const myURL = "http://student04.cse.nd.edu:51035";
 
-const zoomButton = document.getElementById('zoomButton');
-zoomButton.addEventListener('click', function(e) {
+const overviewButton = document.getElementById('overviewButton');
+overviewButton.addEventListener('click', function(e) {
   console.log('Zoom button was clicked');
-  location.href = myURL.concat("/zoom")
+  location.href = myURL.concat("/overview")
 });
 
 const quizButton = document.getElementById('quizButton');
@@ -105,7 +105,7 @@ function initMap() {
    
    var quiz = new google.quizs.Map(document.getElementById('quiz'), {
    center: potowatami,
-   zoom: 18,
+   overview: 18,
    quizTypeId: 'satellite'
    });
    
