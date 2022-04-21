@@ -24,13 +24,13 @@ zooButton.addEventListener('click', function(e) {
   location.href = myURL.concat("/");
 });
 
-const camelButton = document.getElementById('camelButton');
-camelButton.addEventListener('click', function(e) {
-  console.log('Camel button was clicked');
-  location.href = myURL.concat("/camel")
-  //document.getElementById("AnimalImage").src ="images/camel.jpg"
-  //document.getElementById("p2").innerHTML = "Camels are mammals with long legs, a big-lipped snout and a humped back.!";
-  //document.getElementById("p1").innerHTML = "Cherry Camel"; 
+const domeButton = document.getElementById('domeButton');
+domeButton.addEventListener('click', function(e) {
+  console.log('Dome button was clicked');
+  location.href = myURL.concat("/dome")
+  //document.getElementById("AnimalImage").src ="images/dome.jpg"
+  //document.getElementById("p2").innerHTML = "The Golden Dome that sits on top of the Main Building is covered in 23.9-karat gold leaf!";
+  //document.getElementById("p1").innerHTML = "Golden Dome"; 
 });
 
 const monkeyButton = document.getElementById('monkeyButton');
