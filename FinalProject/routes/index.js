@@ -6,11 +6,11 @@ let index = require('../controllers/index')
 /* GET home page. */
 router.get('/',index.index );
 router.get('/zoom',index.zoom);
-router.get('/zoo',index.zoo);
+router.get('/campus',index.campus);
 router.get('/dome',index.dome);
-router.get('/monkey',index.monkey);
-router.get('/cow',index.cow);
-router.get('/crocodile',index.croc);
+router.get('/grotto',index.grotto);
+router.get('/stadium',index.stadium);
+router.get('/hesburgh',index.hes);
 router.get('/map',index.map);
 
 module.exports = router;
