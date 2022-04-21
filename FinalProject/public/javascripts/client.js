@@ -12,10 +12,10 @@ zoomButton.addEventListener('click', function(e) {
   location.href = myURL.concat("/zoom")
 });
 
-const mapButton = document.getElementById('mapButton');
-mapButton.addEventListener('click', function(e) {
+const quizButton = document.getElementById('quizButton');
+quizButton.addEventListener('click', function(e) {
   console.log('Map button was clicked');
-  location.href = myURL.concat("/map");
+  location.href = myURL.concat("/quiz");
 });
 
 const campusButton = document.getElementById('campusButton');
@@ -60,7 +60,7 @@ stadiumButton.addEventListener('click', function(e) {
   //document.getElementById("p1").innerHTML = "Chloe Cow";  
 });
 
-var map;
+var quiz;
 
 function initMap() {
    // Zoo center point
@@ -69,10 +69,10 @@ function initMap() {
      lng: -86.218401
    };
    
-   var map = new google.maps.Map(document.getElementById('map'), {
+   var quiz = new google.quizs.Map(document.getElementById('quiz'), {
    center: potowatami,
    zoom: 18,
-   mapTypeId: 'satellite'
+   quizTypeId: 'satellite'
    });
    
    // Animal locations
@@ -92,25 +92,25 @@ function initMap() {
      lat: 41.669926,
    	 lng: -86.220068
    };
-   var marker = new google.maps.Marker({
+   var marker = new google.quizs.Marker({
 	 position: monkeyCage,
 	 label: { color: '#f7f7f7', fontWeight: 'bold', fontSize: '10px', text: 'Monkeys' },
-     map: map
+     quiz: quiz
    });
-   var marker = new google.maps.Marker({
+   var marker = new google.quizs.Marker({
      position: camelCage,
      label: { color: '#f7f7f7', fontWeight: 'bold', fontSize: '10px', text: 'Camels' },
-     map: map
+     quiz: quiz
    });
-   var marker = new google.maps.Marker({
+   var marker = new google.quizs.Marker({
      position: cowCage,
      label: { color: '#f7f7f7', fontWeight: 'bold', fontSize: '10px', text: 'Cows' },
-     map: map
+     quiz: quiz
    });
-   var marker = new google.maps.Marker({
+   var marker = new google.quizs.Marker({
      position: crocCage,
      label: { color: '#f7f7f7', fontWeight: 'bold', fontSize: '10px', text: 'Crocodiles' },
-     map: map
+     quiz: quiz
    });
 
 }
