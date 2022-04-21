@@ -11,10 +11,9 @@ exports.zoo = function(req, res, next) {
    res.render('index', { about: 'Welcome to our zoo.', animal_name:'Zoo Animals'}); 
 }
 
-exports.camel = function(req, res, next) {
-   console.log("Clicked on camel button")
-   res.render('camel', { about: 'Camels are mammals with long legs, a big-lipped snout\
-   and a humped back.', animal_name:'Camel'});
+exports.dome = function(req, res, next) {
+   console.log("Clicked on dome button")
+   res.render('dome', { about: 'The statue of Mary atop the Golden Dome weighs 4,400 pounds and stand 18 feet, 7 inches tall.', animal_name:'Dome'});
 }
 
 exports.croc = function(req, res, next) {
