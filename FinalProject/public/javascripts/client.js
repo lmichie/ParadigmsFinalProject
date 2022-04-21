@@ -51,11 +51,11 @@ crocButton.addEventListener('click', function(e) {
   //document.getElementById("p1").innerHTML = "Craig Crocodile"; 
 });
 
-const cowButton = document.getElementById('cowButton');
+const stadiumButton = document.getElementById('stadiumButton');
 cowButton.addEventListener('click', function(e) {
-  console.log('Cow button was clicked');
-  location.href = myURL.concat("/cow");
-  //document.getElementById("AnimalImage").src ="images/cow.jpg"
+  console.log('Stadium button was clicked');
+  location.href = myURL.concat("/stadium");
+  //document.getElementById("AnimalImage").src ="images/stadium.jpg"
   //document.getElementById("p2").innerHTML = "Cows are ruminants, which are cud chewing mammals. Sheep and camels also are ruminants. A cow chews her cud (regurgitated, partially digested food) for up to 8 hours each day.";
   //document.getElementById("p1").innerHTML = "Chloe Cow";  
 });
