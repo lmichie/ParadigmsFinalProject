@@ -1,10 +1,10 @@
 console.log('Client-side code running');
 // LOCAL USE:
-//const myURL = "http://localhost:3000";
+const myURL = "http://localhost:51036";
 
 // STUDENT 04 use:
 // This is Prof. Huang's port.  Use your own please!!
-const myURL = "http://student04.cse.nd.edu:51035";
+// const myURL = "http://student04.cse.nd.edu:51035";
 
 const overviewButton = document.getElementById('overviewButton');
 overviewButton.addEventListener('click', function(e) {
@@ -58,6 +58,20 @@ stadiumButton.addEventListener('click', function(e) {
   //document.getElementById("AnimalImage").src ="images/stadium.jpg"
   //document.getElementById("p2").innerHTML = "Cows are ruminants, which are cud chewing mammals. Sheep and camels also are ruminants. A cow chews her cud (regurgitated, partially digested food) for up to 8 hours each day.";
   //document.getElementById("p1").innerHTML = "Chloe Cow";  
+});
+
+const likeButton = document.getElementById('likeButton');
+likeButton.addEventListener('click', function(e) {
+  const { value } = e.target
+  console.log("VALUE: " + value);
+
+  fetch('http://localhost:51036/likes/incrementLikes', { 
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ likeKey: value }) 
+  })
 });
 
 /*

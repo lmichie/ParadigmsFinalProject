@@ -11,9 +11,13 @@ block content
     button#stadiumButton Stadium 
     button#overviewButton Overview
     button#quizButton Quiz
-    script(src='javascripts/client.js')
+
   .main
     h1 Welcome to the #{location_name}
-    button#likeButton Like!
+    button(value="dome")#likeButton Like!
+    //- button#likeButton Like!
+    p#likeCount 100
     p #{about}
     img(src='images/dome.jpg',style='width:500px')
+  
+  script(src='javascripts/client.js')
