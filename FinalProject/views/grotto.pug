@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  h1 Take a tour of our favorite spots on campus.
+  .topnav
+    button#campusButton Campus
+    button#domeButton Dome
+    button#hesButton Hesburgh
+    button#grottoButton Grotto
+    button#stadiumButton Stadium 
+    button#zoomButton ZoomTime
+    button#mapButton ZooMap
+    script(src='javascripts/client.js')
+  .main
+    h1 Welcome to the #{location_name}
+    p #{about}
+    img(src='images/grotto.jpg',style='width:500px')
