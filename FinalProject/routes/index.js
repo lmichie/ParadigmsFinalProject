@@ -7,7 +7,7 @@ let index = require('../controllers/index')
 router.get('/',index.index );
 router.get('/zoom',index.zoom);
 router.get('/zoo',index.zoo);
-router.get('/camel',index.camel);
+router.get('/dome',index.dome);
 router.get('/monkey',index.monkey);
 router.get('/cow',index.cow);
 router.get('/crocodile',index.croc);
