@@ -18,9 +18,9 @@ mapButton.addEventListener('click', function(e) {
   location.href = myURL.concat("/map");
 });
 
-const zooButton = document.getElementById('zooButton');
-zooButton.addEventListener('click', function(e) {
-  console.log('Zoo button was clicked');
+const campusButton = document.getElementById('campusButton');
+campusButton.addEventListener('click', function(e) {
+  console.log('Campus button was clicked');
   location.href = myURL.concat("/");
 });
 
@@ -33,19 +33,19 @@ domeButton.addEventListener('click', function(e) {
   //document.getElementById("p1").innerHTML = "Golden Dome"; 
 });
 
-const monkeyButton = document.getElementById('monkeyButton');
-monkeyButton.addEventListener('click', function(e) {
-  console.log('Monkey button was clicked');
-  location.href = myURL.concat("/monkey")
+const grottoButton = document.getElementById('grottoButton');
+grottoButton.addEventListener('click', function(e) {
+  console.log('Grotto button was clicked');
+  location.href = myURL.concat("/grotto")
   //document.getElementById("AnimalImage").src ="images/monkey.jpg";
   //document.getElementById("p2").innerHTML = "Monkeys live in trees, grasslands, mountains, forests, and on high plains. Each monkey has its own unique fingerprints.";
   //document.getElementById("p1").innerHTML = "Mindy Monkey"; 
 });
 
-const crocButton = document.getElementById('crocButton');
-crocButton.addEventListener('click', function(e) {
-  console.log('Crocodile button was clicked');
-  location.href = myURL.concat("/crocodile") ;
+const hesburghButton = document.getElementById('hesburghButton');
+hesburghButton.addEventListener('click', function(e) {
+  console.log('Hesburgh button was clicked');
+  location.href = myURL.concat("/hesburgh") ;
   //document.getElementById("AnimalImage").src ="images/crocodile.jpg";
   //document.getElementById("p2").innerHTML = "Crocodiles are repitles with sharp teeth.  They can run very fast over short distances.";
   //document.getElementById("p1").innerHTML = "Craig Crocodile"; 
