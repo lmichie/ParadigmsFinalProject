@@ -1,5 +1,5 @@
 exports.index = function(req, res, next) {
-  res.render('index', { about: 'Welcome to our zoo!' , animal_name:
+  res.render('index', { about: 'Welcome to our zoo!' , location_name:
  'Zoo Animals'});
 }
 
