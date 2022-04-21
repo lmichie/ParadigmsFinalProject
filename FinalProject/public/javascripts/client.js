@@ -60,7 +60,7 @@ stadiumButton.addEventListener('click', function(e) {
   //document.getElementById("p1").innerHTML = "Chloe Cow";  
 });
 
-<<<<<<< HEAD
+/*
 const likeButton = document.getElementById('likeButton');
 likeButton.addEventListener('click', function(e) {
     console.log('Like button was clicked');
@@ -91,7 +91,7 @@ setInterval(function() {
             console.log(error);
         });
 }, 1000);
-
+*/
 /*
 var map;
 var quiz;
