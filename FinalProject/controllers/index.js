@@ -16,8 +16,8 @@ exports.dome = function(req, res, next) {
    res.render('dome', { about: 'The statue of Mary atop the Golden Dome weighs 4,400 pounds and stand 18 feet, 7 inches tall.', location_name:'Dome'});
 }
 
-exports.hes = function(req, res, next) {
-   console.log("Clicked on hes button")
+exports.hesburgh = function(req, res, next) {
+   console.log("Clicked on hesburgh button")
    res.render('hesburgh', { about: 'Hesburgh Library is home to 14 floors plus one lower level.' , location_name:'Hesburgh'}); 
 }
 
