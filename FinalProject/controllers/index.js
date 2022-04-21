@@ -4,7 +4,7 @@ exports.index = function(req, res, next) {
 }
 
 exports.overview = function(req, res, next) {
-  res.render('overview', {about:'Zoom Time'});
+  res.render('overview', {about:' '});
 }
 
 exports.campus = function(req, res, next) {
