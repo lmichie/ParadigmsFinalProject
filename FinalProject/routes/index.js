@@ -5,7 +5,7 @@ let index = require('../controllers/index')
 
 /* GET home page. */
 router.get('/',index.index );
-router.get('/zoom',index.zoom);
+router.get('/overview',index.overview);
 router.get('/campus',index.campus);
 router.get('/dome',index.dome);
 router.get('/grotto',index.grotto);

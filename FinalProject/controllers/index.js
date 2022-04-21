@@ -3,8 +3,8 @@ exports.index = function(req, res, next) {
  'Campus Map'});
 }
 
-exports.zoom = function(req, res, next) {
-  res.render('zoom', {about:'Zoom Time'});
+exports.overview = function(req, res, next) {
+  res.render('overview', {about:'Zoom Time'});
 }
 
 exports.campus = function(req, res, next) {
