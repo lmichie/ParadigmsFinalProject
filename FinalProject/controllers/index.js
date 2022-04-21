@@ -26,8 +26,8 @@ exports.cow = function(req, res, next) {
    res.render('cow', { about: 'Cows are ruminants, which are cud chewing mammals. Sheep and camels also are ruminants. A cow chews her cud (regurgitated, partially digested food) for up to 8 hours each day.' , animal_name:'Cow'}); 
 }
 
-exports.monkey = function(req, res, next) {
-   res.render('monkey', { about: 'Monkeys live in trees, grasslands, mountains, forests, and on high plains. Each monkey has its own unique fingerprints.' , animal_name:'Monkey'}); 
+exports.grotto = function(req, res, next) {
+   res.render('grotto', { about: 'The Grotto was completed in 1896 and was Father Corby\'s idea.' , location_name:'Grotto'}); 
 }
 
 exports.map = function(req, res, next) {
