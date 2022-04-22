@@ -62,6 +62,7 @@ stadiumButton.addEventListener('click', function(e) {
 
 const likeButton = document.getElementById('likeButton');
 likeButton.addEventListener('click', function(e) {
+  console.log('Like button was clicked');
   const { value } = e.target
   console.log("VALUE: " + value);
 
