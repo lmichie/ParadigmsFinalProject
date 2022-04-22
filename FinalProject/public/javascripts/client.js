@@ -1,10 +1,10 @@
 console.log('Client-side code running');
 // LOCAL USE:
-const myURL = "http://localhost:51036";
+//const myURL = "http://localhost:51036";
 
 // STUDENT 04 use:
 // This is Prof. Huang's port.  Use your own please!!
-// const myURL = "http://student04.cse.nd.edu:51035";
+ const myURL = "http://student04.cse.nd.edu:51036";
 
 const overviewButton = document.getElementById('overviewButton');
 overviewButton.addEventListener('click', function(e) {
