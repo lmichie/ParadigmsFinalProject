@@ -66,7 +66,7 @@ likeButton.addEventListener('click', function(e) {
   const { value } = e.target
   console.log("VALUE: " + value);
 
-  fetch('http://student04@cse.nd.edu:51036/likes/incrementLikes', { 
+  fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
