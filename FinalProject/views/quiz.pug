@@ -15,6 +15,9 @@ block content
   .main
     h1 Take a Notre Dame Quiz!
     p When finished click submit to see how you did!
+    ul
+      each qustion in questions
+        li=question
     
 
   script(src='javascripts/client.js')
