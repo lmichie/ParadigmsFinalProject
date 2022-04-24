@@ -116,7 +116,7 @@ const questions = [
 
 function buildQuiz(){
     const output = [];
-
+    console.log('Like button was clicked');
     // for each question...
     quesions.forEach(
       (currentQuestion, questionNumber) => {
