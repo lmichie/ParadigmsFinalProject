@@ -60,6 +60,6 @@ router.get('/dome',index.dome);
 router.get('/grotto',index.grotto);
 router.get('/stadium',index.stadium);
 router.get('/hesburgh',index.hesburgh);
-router.get('/quiz',index.quiz);
+router.get('/quiz',index.quiz, questions);
 
 module.exports = router;
