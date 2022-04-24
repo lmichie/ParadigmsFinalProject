@@ -11,14 +11,13 @@ block content
     button#stadiumButton Stadium
     button#overviewButton Zoom
     button#quizButton Quiz
-    script(src='javascripts/client.js')
-  .quiz
+  .main
     h1 Take a Notre Dame Quiz!
     p When finished click submit to see how you did!
     button(value="submit")#submitButton Submit!
-    ul
-      each item in questions
-        each question in item
-          li=question
+	script(src='javascripts/client.js')
+	script(src='javascripts/client.js&callback=initQuiz')
+  .quiz
+    #quiz
   .results
-  script(src='javascripts/client.js')
+

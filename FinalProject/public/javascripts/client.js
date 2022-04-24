@@ -114,7 +114,7 @@ const questions = [
   }
  ];
 
-/*function buildQuiz(){
+function buildQuiz(){
     const output = [];
 
     // for each question...
@@ -144,8 +144,9 @@ const questions = [
         );
       }
     );
+}
 
-function showResults(){}*/
+/*function showResults(){}*/
 
 
 
