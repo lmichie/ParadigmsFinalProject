@@ -75,6 +75,14 @@ likeButton.addEventListener('click', function(e) {
   })
 });
 
+const submitButton = document.getElementById('submitButton');
+submitButton.addEventListener('click', function(e) {
+  console.log('Submit button was clicked');
+  const { value } = e.target
+  console.log("VALUE: " + value);
+
+});
+
 /*
 const likeButton = document.getElementById('likeButton');
 likeButton.addEventListener('click', function(e) {
