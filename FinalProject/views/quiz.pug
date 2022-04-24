@@ -16,8 +16,9 @@ block content
     h1 Take a Notre Dame Quiz!
     p When finished click submit to see how you did!
     ul
-      each qustion in questions
-        li=question
+      each item in questions
+        each question in item
+          li=question
     
 
   script(src='javascripts/client.js')
