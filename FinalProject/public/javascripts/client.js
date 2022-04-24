@@ -114,7 +114,7 @@ const questions = [
   }
  ];
 
-function buildQuiz(){
+/*function buildQuiz(){
     const output = [];
 
     // for each question...
@@ -145,7 +145,7 @@ function buildQuiz(){
       }
     );
 
-function showResults(){}
+function showResults(){}*/
 
 
 
