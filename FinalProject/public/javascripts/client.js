@@ -67,7 +67,7 @@ const submitButton = document.getElementById('submitButton');
 submitButton.addEventListener('click', showresults);
 
 const startButton = document.getElementById('startButton');
-likeButton.addEventListener('click', function(e) {
+startButton.addEventListener('click', function(e) {
   console.log('Start button was clicked');
   bulidQuiz();
 });
