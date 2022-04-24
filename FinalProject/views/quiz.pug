@@ -14,8 +14,9 @@ block content
   .main
     h1 Take a Notre Dame Quiz!
     p When finished click submit to see how you did!
-    button(value="submit")#submitButton Submit!
-    script(src='javascripts/client.js&callback=buildQuiz')
+    #startButton Start
+    #submitButton Submit
+    script(src='javascripts/client.js')
   .quiz
     #quiz
   .results
