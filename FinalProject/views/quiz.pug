@@ -17,10 +17,11 @@ block content
     p When finished click submit to see how you did!
     button#startButton Start
     button#submitButton Submit
-    ul
-     each item in questions
-       each question in item
-         li=question
+    form("quiz", method="form")
+    each item in questions
+     p #{item.question}
+     each answer in item.answers
+      <p><input type="radio" name=item.id/>#{answer}</p>
 
   script(src='javascripts/client.js')
 
