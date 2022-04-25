@@ -1,3 +1,59 @@
+const questions="{
+    "questions" :[
+        {
+            "question": "Who is the President of Notre Dame?",
+            "question_type":"multiple-choice",
+            "answers": [
+                "Joe Biden",
+                "Knute Rockne",
+                "Father John Jenkins"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "question": "What year was the Universoty founded?",
+            "question_type":"multiple-choice",
+            "answers": [
+                "1842",
+                "1953",
+                "1776"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "question": "Notre Dame is located in what city?",
+            "question_type":"multiple-choice",
+            "answers": [
+                "Chicago",
+                "Indianpolis",
+                "South Bend"
+            ],
+            "correctAnswer": 3
+        },
+        {
+            "question" : "How many residence halls are on campus?",
+            "question_type":"multiple-choice",
+            "answers" : [
+                "51",
+                "32",
+                "28"
+            ],
+            "correctAnswer" : 2
+        },
+        {
+            "question" : "What are Notre Dame's offical colors?",
+            "question_type":"multiple-choice",
+            "answers" : [
+                "Blue and Gold",
+                "Green and Navy",
+                "Gold and Green"
+            ],
+            "correctAnswer": 1
+        }
+    ]
+}";
+
+
 exports.index = function(req, res, next) {
   res.render('index', { about: 'Welcome to our campus!' , location_name:
  'Campus Map'});
@@ -31,6 +87,6 @@ exports.grotto = function(req, res, next) {
 }
 
 exports.quiz = function(req, res, next) {
-   res.render('quiz'); 
+   res.render('quiz', {questions}); 
 }
 
