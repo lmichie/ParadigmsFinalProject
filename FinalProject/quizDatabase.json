@@ -1,8 +1,9 @@
+
 {
     "questions" :[
         {
             "question": "Who is the President of Notre Dame?",
-                        "question_type":"multiple-choice",
+            "question_type":"multiple-choice",
             "answers": [
                 "Joe Biden",
                 "Knute Rockne",
@@ -12,7 +13,7 @@
         },
         {
             "question": "What year was the Universoty founded?",
-                        "question_type":"multiple-choice",
+            "question_type":"multiple-choice",
             "answers": [
                 "1842",
                 "1953",
@@ -22,7 +23,7 @@
         },
         {
             "question": "Notre Dame is located in what city?",
-                        "question_type":"multiple-choice",
+            "question_type":"multiple-choice",
             "answers": [
                 "Chicago",
                 "Indianpolis",
@@ -32,7 +33,7 @@
         },
         {
             "question" : "How many residence halls are on campus?",
-                        "question_type":"multiple-choice",
+            "question_type":"multiple-choice",
             "answers" : [
                 "51",
                 "32",
@@ -42,7 +43,7 @@
         },
         {
             "question" : "What are Notre Dame's offical colors?",
-                        "question_type":"multiple-choice",
+            "question_type":"multiple-choice",
             "answers" : [
                 "Blue and Gold",
                 "Green and Navy",
