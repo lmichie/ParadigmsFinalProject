@@ -47,22 +47,6 @@ stadiumButton.addEventListener('click', function(e) {
   console.log('Stadium button was clicked');
   location.href = myURL.concat("/stadium");
 });
-
-const likeButton = document.getElementById('likeButton');
-likeButton.addEventListener('click', function(e) {
-  console.log('Like button was clicked');
-  const { value } = e.target
-  console.log("VALUE: " + value);
-
-  fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ likeKey: value }) 
-  })
-});
-
 const submitButton = document.getElementById('submitButton');
 submitButton.addEventListener('click', showresults);
 
@@ -153,6 +137,21 @@ function buildQuiz(){
 }
 
 /*function showResults(){}*/
+
+const likeButton = document.getElementById('likeButton');
+likeButton.addEventListener('click', function(e) {
+  console.log('Like button was clicked');
+  const { value } = e.target
+  console.log("VALUE: " + value);
+
+  fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ likeKey: value }) 
+  })
+});
 
 
 
