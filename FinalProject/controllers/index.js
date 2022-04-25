@@ -73,7 +73,19 @@ exports.overview = function(req, res, next) {
 }
 
 exports.campus = function(req, res, next) {
-   res.render('index', { about: 'Welcome to our campus.', location_name:'Campus'}); 
+   console.log("Clicked on dome button");
+   fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'dome' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('index', { about: 'Welcome to our campus.', location_name:'Campus', likeCount: likes}); 
+        })
+    })
 }
 
 exports.dome = function(req, res, next) {
@@ -115,7 +127,7 @@ exports.stadium = function(req, res, next) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ likeKey: 'dome' }) 
+      body: JSON.stringify({ likeKey: 'stadium' }) 
     }).then(response => {
         response.json().then(jsonRes => {
             const { likes } = jsonRes.data
@@ -130,7 +142,7 @@ exports.grotto = function(req, res, next) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ likeKey: 'dome' }) 
+      body: JSON.stringify({ likeKey: 'grotto' }) 
     }).then(response => {
         response.json().then(jsonRes => {
             const { likes } = jsonRes.data
@@ -145,7 +157,7 @@ exports.quiz = function(req, res, next) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ likeKey: 'dome' }) 
+      body: JSON.stringify({ likeKey: 'quiz' }) 
     }).then(response => {
         response.json().then(jsonRes => {
             const { likes } = jsonRes.data
