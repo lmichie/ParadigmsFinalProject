@@ -1,4 +1,4 @@
-const questions={
+const questions = {
     "questions" :[
         {
             "question": "Who is the President of Notre Dame?",
@@ -8,7 +8,8 @@ const questions={
                 "Knute Rockne",
                 "Father John Jenkins"
             ],
-            "correctAnswer": 3
+            "correctAnswer": 3,
+            "id": "question1"
         },
         {
             "question": "What year was the Universoty founded?",
@@ -18,7 +19,8 @@ const questions={
                 "1953",
                 "1776"
             ],
-            "correctAnswer": 1
+            "correctAnswer": 1,
+            "id": "question2"
         },
         {
             "question": "Notre Dame is located in what city?",
@@ -28,7 +30,8 @@ const questions={
                 "Indianpolis",
                 "South Bend"
             ],
-            "correctAnswer": 3
+            "correctAnswer": 3,
+            "id": "question3"
         },
         {
             "question" : "How many residence halls are on campus?",
@@ -38,7 +41,8 @@ const questions={
                 "32",
                 "28"
             ],
-            "correctAnswer" : 2
+            "correctAnswer" : 2,
+            "id": "question4"
         },
         {
             "question" : "What are Notre Dame's offical colors?",
@@ -48,7 +52,8 @@ const questions={
                 "Green and Navy",
                 "Gold and Green"
             ],
-            "correctAnswer": 1
+            "correctAnswer": 1,
+            "id": "question5"
         }
     ]
 };
@@ -87,6 +92,6 @@ exports.grotto = function(req, res, next) {
 }
 
 exports.quiz = function(req, res, next) {
-   res.render('quiz', {questions}); 
+   res.render('quiz', questions); 
 }
 
