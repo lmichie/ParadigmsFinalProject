@@ -1,10 +1,10 @@
 console.log('Client-side code running');
 // LOCAL USE:
-//const myURL = "http://localhost:51036";
+const myURL = "http://localhost:51036";
 
 // STUDENT 04 use:
 // This is Prof. Huang's port.  Use your own please!!
-const myURL = "http://student04.cse.nd.edu:51036";
+// const myURL = "http://student04.cse.nd.edu:51036";
 
 const overviewButton = document.getElementById('overviewButton');
 overviewButton.addEventListener('click', function(e) {
@@ -47,30 +47,34 @@ stadiumButton.addEventListener('click', function(e) {
   console.log('Stadium button was clicked');
   location.href = myURL.concat("/stadium");
 });
-const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', function(e) {
-  console.log('submit button was clicked');
-});
-
-const startButton = document.getElementById('startButton');
-startButton.addEventListener('click', function(e) {
-  console.log('Start button was clicked');
-});
-
 
 const likeButton = document.getElementById('likeButton');
-likeButton.addEventListener('click', function(e) {
-  console.log('Like button was clicked');
-  const { value } = e.target
-  console.log("VALUE: " + value);
+if (likeButton) {
+  likeButton.addEventListener('click', function(e) {
+    console.log('Like button was clicked');
+    const { value } = e.target
+    console.log("VALUE: " + value);
+  
+    fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: value }) 
+    })
+  });
+}
 
-  fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ likeKey: value }) 
-  })
-});
+const submitButton = document.getElementById('submitButton');
+if (submitButton) {
+  submitButton.addEventListener('click', function(e) {
+    console.log('submit button was clicked');
+  });
+}
 
-
+const startButton = document.getElementById('startButton');
+if (startButton) {
+  startButton.addEventListener('click', function(e) {
+    console.log('Start button was clicked');
+  });
+}
