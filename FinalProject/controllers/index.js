@@ -30,7 +30,7 @@ exports.grotto = function(req, res, next) {
    res.render('grotto', { about: 'The Grotto was completed in 1896 and was Father Corby\'s idea.' , location_name:'Grotto'}); 
 }
 
-/*exports.quiz = function(req, res, next) {
-   res.render('quiz', {questions}); 
-}*/
+exports.quiz = function(req, res, next) {
+   res.render('quiz'); 
+}
 
