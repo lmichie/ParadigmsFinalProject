@@ -1,4 +1,4 @@
-{
+const questions={
     "questions" :[
         {
             "question": "Who is the President of Notre Dame?",
@@ -51,7 +51,7 @@
             "correctAnswer": 1
         }
     ]
-}
+};
 
 
 exports.index = function(req, res, next) {
