@@ -1,3 +1,7 @@
+const fetch = require('cross-fetch')
+
+const getLikesURL = 'http://localhost:51036/likes/getLikes'
+
 const questions = {
     "questions" :[
         {
@@ -73,13 +77,35 @@ exports.campus = function(req, res, next) {
 }
 
 exports.dome = function(req, res, next) {
-   console.log("Clicked on dome button")
-   res.render('dome', { about: 'The statue of Mary atop the Golden Dome weighs 4,400 pounds and stand 18 feet, 7 inches tall.', location_name:'Dome'});
+   console.log("Clicked on dome button");
+   fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'dome' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('dome', { about: 'The statue of Mary atop the Golden Dome weighs 4,400 pounds and stand 18 feet, 7 inches tall.', location_name:'Dome', likeCount: likes });
+        })
+    })
 }
 
 exports.hesburgh = function(req, res, next) {
    console.log("Clicked on hesburgh button")
-   res.render('hesburgh', { about: 'Hesburgh Library is home to 14 floors plus one lower level.' , location_name:'Hesburgh'}); 
+   fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'hesburgh' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('hesburgh', { about: 'Hesburgh Library is home to 14 floors plus one lower level.' , location_name:'Hesburgh'}); 
+        })
+    })
 }
 
 exports.stadium = function(req, res, next) {
