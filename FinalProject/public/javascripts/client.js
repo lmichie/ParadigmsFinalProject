@@ -57,7 +57,7 @@ startButton.addEventListener('click', function(e) {
   console.log('Start button was clicked');
 });
 
-/*
+
 const likeButton = document.getElementById('likeButton');
 likeButton.addEventListener('click', function(e) {
   console.log('Like button was clicked');
@@ -72,5 +72,5 @@ likeButton.addEventListener('click', function(e) {
     body: JSON.stringify({ likeKey: value }) 
   })
 });
-*/
+
 
