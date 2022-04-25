@@ -55,7 +55,6 @@ submitButton.addEventListener('click', function(e) {
 const startButton = document.getElementById('startButton');
 startButton.addEventListener('click', function(e) {
   console.log('Start button was clicked');
-  buildQuiz();
 });
 
 /*
