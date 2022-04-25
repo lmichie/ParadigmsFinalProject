@@ -105,6 +105,7 @@ const questions = [
     correctAnswer: "a"
   }
  ];
+/*
 const likeButton = document.getElementById('likeButton');
 likeButton.addEventListener('click', function(e) {
   console.log('Like button was clicked');
@@ -119,4 +120,5 @@ likeButton.addEventListener('click', function(e) {
     body: JSON.stringify({ likeKey: value }) 
   })
 });
+*/
 
