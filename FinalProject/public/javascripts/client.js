@@ -55,8 +55,7 @@ if (likeButton) {
     const { value } = e.target
     console.log("VALUE: " + value);
   
-    fetch('http://localhost:51036/likes/incrementLikes', { 
-    // fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
+    fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -74,7 +73,7 @@ if (submitButton) {
 }
 
 const startButton = document.getElementById('startButton');
-  if (startButton) {
+if (startButton) {
   startButton.addEventListener('click', function(e) {
     console.log('Start button was clicked');
   });
