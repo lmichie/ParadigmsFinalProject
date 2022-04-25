@@ -4,7 +4,7 @@ console.log('Client-side code running');
 
 // STUDENT 04 use:
 // This is Prof. Huang's port.  Use your own please!!
- const myURL = "http://student04.cse.nd.edu:51036";
+const myURL = "http://student04.cse.nd.edu:51036";
 
 const overviewButton = document.getElementById('overviewButton');
 overviewButton.addEventListener('click', function(e) {
