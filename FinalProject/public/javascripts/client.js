@@ -48,13 +48,16 @@ stadiumButton.addEventListener('click', function(e) {
   location.href = myURL.concat("/stadium");
 });
 const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', showresults);
+submitButton.addEventListener('click', function(e) {
+  console.log('submit button was clicked');
+});
 
 const startButton = document.getElementById('startButton');
 startButton.addEventListener('click', function(e) {
   console.log('Start button was clicked');
   buildQuiz();
 });
+
 const questions = [
   {
     question: "Who is the President of Notre Dame?",
