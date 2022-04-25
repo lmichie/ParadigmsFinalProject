@@ -8,7 +8,7 @@ console.log('Client-side code running');
 
 const overviewButton = document.getElementById('overviewButton');
 overviewButton.addEventListener('click', function(e) {
-  console.log('Zoom button was clicked');
+  console.log('Overview button was clicked');
   location.href = myURL.concat("/overview")
 });
 
