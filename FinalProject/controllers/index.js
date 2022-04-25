@@ -1,6 +1,6 @@
 const fetch = require('cross-fetch')
 
-const getLikesURL = 'http://localhost:51036/likes/getLikes'
+const getLikesURL = 'http://student04.cse.nd.edu:51036/likes/getLikes'
 
 const questions = {
     "questions" :[
@@ -103,21 +103,54 @@ exports.hesburgh = function(req, res, next) {
     }).then(response => {
         response.json().then(jsonRes => {
             const { likes } = jsonRes.data
-            res.render('hesburgh', { about: 'Hesburgh Library is home to 14 floors plus one lower level.' , location_name:'Hesburgh'}); 
+            res.render('hesburgh', { about: 'Hesburgh Library is home to 14 floors plus one lower level.' , location_name:'Hesburgh', likeCount: likes }); 
         })
     })
 }
 
 exports.stadium = function(req, res, next) {
    console.log("Clicked on Stadium button")
-   res.render('stadium', { about: 'The stadium seat over 80,000 fightin\' Irish Fans!' , location_name:'Stadium'}); 
+    fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'dome' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('stadium', { about: 'The stadium seat over 80,000 fightin\' Irish Fans!' , location_name:'Stadium', likeCount: likes}); 
+        })
+    })
 }
 
 exports.grotto = function(req, res, next) {
-   res.render('grotto', { about: 'The Grotto was completed in 1896 and was Father Corby\'s idea.' , location_name:'Grotto'}); 
+    fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'dome' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('grotto', { about: 'The Grotto was completed in 1896 and was Father Corby\'s idea.' , location_name:'Grotto', likeCount: likes}); 
+        })
+    })
 }
 
 exports.quiz = function(req, res, next) {
-   res.render('quiz', questions); 
+    fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'dome' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('quiz', questions, {likeCount: likes}); 
+        })
+    })
 }
 
