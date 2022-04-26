@@ -80,7 +80,73 @@ if (startButton) {
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const myQuestions = [
-    html = '<div><input type="radio" name="size" value="Answer 1" id="xs"><label for="xs">HERE</label></div>'
-    document.getElementById("quiz").insertAdjacentHTML('afterend',html);
+        {
+            question : "Who is the President of Notre Dame?",
+            answers: {
+                a: "Joe Biden",
+                b: "Knute Rockne",
+                c: "Father John Jenkins"
+            },
+            correctAnswer: c
+        },
+        {
+            question: "What year was the Universoty founded?",
+            answers: {
+                a: "1842",
+                b: "1953",
+                c: "1776"
+            },
+            correctAnswer: a
+        },
+        {
+            question: "Notre Dame is located in what city?",
+            answers: {
+                a: "Chicago",
+                b: "Indianpolis",
+                c: "South Bend"
+            },
+            "correctAnswer": c
+        },
+        {
+            question : "How many residence halls are on campus?",
+            answers : {
+               a: "51",
+               b: "32",
+               c: "28"
+            },
+            "correctAnswer" : b
+        },
+        {
+            question : "What are Notre Dame's offical colors?",
+            answers : {
+               a: "Blue and Gold",
+               b: "Green and Navy",
+               c: "Gold and Green"
+            },
+            correctAnswer: a
+        }
+    ];
+    const output = [];
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+        const answers = [];
+        for(letter in currentQuestion.answers){
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+    quizContainer.innerHTML = output.join('');
+    //html = '<div><input type="radio" name="size" value="Answer 1" id="xs"><label for="xs">HERE</label></div>'
+    //document.getElementById("quiz").insertAdjacentHTML('afterend',html);
   });
 }
