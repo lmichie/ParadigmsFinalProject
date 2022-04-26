@@ -3,7 +3,7 @@ const { resolve } = require('path');
 
 const LIKES_SAVE_FILE = '../likesSaveFile.json'
 
-const LIKE_FILE_KEYS = ['campus', 'dome', 'hesburgh', 'grotto', 'stadium', 'overview']
+const LIKE_FILE_KEYS = ['campus', 'dome', 'hesburgh', 'grotto', 'stadium', 'overview', 'quiz']
 
 const getLikeFilePath = () => {
     return resolve(__dirname, LIKES_SAVE_FILE);
