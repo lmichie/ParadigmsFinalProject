@@ -184,7 +184,7 @@ exports.quiz = function(req, res, next) {
     }).then(response => {
         response.json().then(jsonRes => {
             const { likes } = jsonRes.data
-            res.render('quiz', questions, {likeCount: likes}); 
+            res.render('quiz', questions); 
         })
     })
 }
