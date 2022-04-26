@@ -1,4 +1,3 @@
-
 console.log('Client-side code running');
 // LOCAL USE:
 //const myURL = "http://localhost:51036";
@@ -144,7 +143,7 @@ if (startButton) {
   startButton.addEventListener('click', function(e) {
     console.log('Start button was clicked');
     const output = [];
-        myQuestions.sort(function (a,b) {return Math.random() - 0.5;});
+    myQuestions.sort(function (a,b) {return Math.random() - 0.5;});
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
         const answers = [];
@@ -163,6 +162,7 @@ if (startButton) {
         );
       }
     );
+        output.pop(0);
     quizContainer.innerHTML = output.join('');
   });
 }
