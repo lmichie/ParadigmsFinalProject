@@ -63,11 +63,6 @@ const questions = {
 };
 
 
-exports.index = function(req, res, next) {
-  res.render('index', { about: 'Welcome to our campus!' , location_name:
- 'Campus Map'});
-}
-
 exports.overview = function(req, res, next) {
    console.log("Clicked on dome button");
    fetch(getLikesURL, { 
@@ -84,7 +79,7 @@ exports.overview = function(req, res, next) {
    })
 }
 
-exports.campus = function(req, res, next) {
+exports.index = function(req, res, next) {
    console.log("Clicked on dome button");
    fetch(getLikesURL, { 
       method: 'POST',
