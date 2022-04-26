@@ -70,6 +70,8 @@ const submitButton = document.getElementById('submitButton');
 if (submitButton) {
   submitButton.addEventListener('click', function(e) {
     console.log('submit button was clicked');
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('results');
     const answerContainers = quizContainer.querySelectorAll('.answers');
     let numCorrect = 0;
     myQuestions.forEach( (currentQuestion, questionNumber) => {
