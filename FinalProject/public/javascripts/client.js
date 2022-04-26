@@ -77,6 +77,9 @@ const startButton = document.getElementById('startButton');
 if (startButton) {
   startButton.addEventListener('click', function(e) {
     console.log('Start button was clicked');
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('results');
+    const myQuestions = [
     html = '<div><input type="radio" name="size" value="Answer 1" id="xs"><label for="xs">HERE</label></div>'
     document.getElementById("quiz").insertAdjacentHTML('afterend',html);
   });
