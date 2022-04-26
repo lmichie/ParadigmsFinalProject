@@ -63,6 +63,22 @@ const questions = {
 };
 
 
+exports.index = function(req, res, next) {
+   console.log("Clicked on dome button");
+   fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'overview' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('index', { about: 'Welcome to our campus!' , location_name:'Campus Map', likeCount: likes});
+        })
+    })
+}
+
 exports.overview = function(req, res, next) {
    console.log("Clicked on dome button");
    fetch(getLikesURL, { 
@@ -79,7 +95,7 @@ exports.overview = function(req, res, next) {
    })
 }
 
-exports.index = function(req, res, next) {
+exports.campus = function(req, res, next) {
    console.log("Clicked on dome button");
    fetch(getLikesURL, { 
       method: 'POST',
