@@ -70,6 +70,21 @@ const submitButton = document.getElementById('submitButton');
 if (submitButton) {
   submitButton.addEventListener('click', function(e) {
     console.log('submit button was clicked');
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+    let numCorrect = 0;
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      if(userAnswer === currentQuestion.correctAnswer){
+        numCorrect++;
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      else{
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
   });
 }
 
@@ -146,7 +161,5 @@ if (startButton) {
       }
     );
     quizContainer.innerHTML = output.join('');
-    //html = '<div><input type="radio" name="size" value="Answer 1" id="xs"><label for="xs">HERE</label></div>'
-    //document.getElementById("quiz").insertAdjacentHTML('afterend',html);
   });
 }
