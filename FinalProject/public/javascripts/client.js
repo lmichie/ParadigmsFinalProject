@@ -87,7 +87,7 @@ if (startButton) {
                 b: "Knute Rockne",
                 c: "Father John Jenkins"
             },
-            correctAnswer: c
+            correctAnswer: "c"
         },
         {
             question: "What year was the Universoty founded?",
@@ -96,7 +96,7 @@ if (startButton) {
                 b: "1953",
                 c: "1776"
             },
-            correctAnswer: a
+            correctAnswer: "a"
         },
         {
             question: "Notre Dame is located in what city?",
@@ -105,7 +105,7 @@ if (startButton) {
                 b: "Indianpolis",
                 c: "South Bend"
             },
-            "correctAnswer": c
+            "correctAnswer": "c"
         },
         {
             question : "How many residence halls are on campus?",
@@ -114,7 +114,7 @@ if (startButton) {
                b: "32",
                c: "28"
             },
-            "correctAnswer" : b
+            "correctAnswer" : "b"
         },
         {
             question : "What are Notre Dame's offical colors?",
@@ -123,7 +123,7 @@ if (startButton) {
                b: "Green and Navy",
                c: "Gold and Green"
             },
-            correctAnswer: a
+            correctAnswer: "a"
         }
     ];
     const output = [];
