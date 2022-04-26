@@ -16,6 +16,7 @@ block content
     button(value="quiz")#likeButton Like!
     p#likeCount Number of likes: #{likeCount}
     p When finished click submit to see how you did!
+    button#startButton Start
     form("quiz", method="form")
     each item in questions
      p #{item.question}
