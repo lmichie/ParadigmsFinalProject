@@ -17,11 +17,12 @@ block content
     p#likeCount Number of likes: #{likeCount}
     p When finished click submit to see how you did!
     button#startButton Start
-    form("quiz", method="form")
-    each item in questions
-     p #{item.question}
-     each answer in item.answers
-      <p><input type="radio" name=item.id/>#{answer}</p>
+    p#quiz QUIZ SECTION
+    //form("quiz", method="form")
+    //each item in questions
+     //p #{item.question}
+     //each answer in item.answers
+      //<p><input type="radio" name=item.id/>#{answer}</p>
     button(type='submit' onclick='showResults()') Submit
   script(src='javascripts/client.js')
    
