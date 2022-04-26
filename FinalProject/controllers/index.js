@@ -69,7 +69,19 @@ exports.index = function(req, res, next) {
 }
 
 exports.overview = function(req, res, next) {
-  res.render('overview', {about:' '});
+   console.log("Clicked on dome button");
+   fetch(getLikesURL, { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likeKey: 'overview' }) 
+    }).then(response => {
+        response.json().then(jsonRes => {
+            const { likes } = jsonRes.data
+            res.render('overview', {about:' ', likeCount: likes});
+        })
+   })
 }
 
 exports.campus = function(req, res, next) {
@@ -79,7 +91,7 @@ exports.campus = function(req, res, next) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ likeKey: 'dome' }) 
+      body: JSON.stringify({ likeKey: 'campus' }) 
     }).then(response => {
         response.json().then(jsonRes => {
             const { likes } = jsonRes.data
