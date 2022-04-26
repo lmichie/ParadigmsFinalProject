@@ -1,3 +1,4 @@
+
 console.log('Client-side code running');
 // LOCAL USE:
 //const myURL = "http://localhost:51036";
@@ -19,7 +20,7 @@ const myQuestions = [
     correctAnswer: "c"
   },
   {
-     question: "What year was the Universoty founded?",
+     question: "What year was the University founded?",
      answers: {
        a: "1842",
        b: "1953",
@@ -31,7 +32,7 @@ const myQuestions = [
     question: "Notre Dame is located in what city?",
     answers: {
       a: "Chicago",
-      b: "Indianpolis",
+      b: "Indianapolis",
       c: "South Bend"
     },
     correctAnswer: "c"
@@ -105,13 +106,13 @@ if (likeButton) {
     const { value } = e.target
     console.log("VALUE: " + value);
 
-    //fetch('http://localhost:51036/likes/incrementLikes', { 
-    fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', { 
+    //fetch('http://localhost:51036/likes/incrementLikes', {
+    fetch('http://student04.cse.nd.edu:51036/likes/incrementLikes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ likeKey: value }) 
+      body: JSON.stringify({ likeKey: value })
     })
   });
 }
@@ -143,6 +144,7 @@ if (startButton) {
   startButton.addEventListener('click', function(e) {
     console.log('Start button was clicked');
     const output = [];
+        myQuestions.sort(function (a,b) {return Math.random() - 0.5;});
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
         const answers = [];
